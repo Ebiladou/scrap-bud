@@ -21,8 +21,6 @@ The code is intended for learning and experimentation.
 |-- warwick_scraper/
 |   |-- config.py
 |   `-- main.py
-|-- bristol.py
-|-- war.py
 |-- test.py
 |-- utils.py
 |-- requirements.txt
@@ -67,7 +65,7 @@ TEST_LIST_URL=
 TEST_SCHOOL_NAME=
 ```
 
-The exploratory `test.py` file stays at the project root, but it now reads `TEST_LIST_URL` and `TEST_SCHOOL_NAME` from `.env`.
+The exploratory `test.py` file stays at the project root, but it reads `TEST_LIST_URL` and `TEST_SCHOOL_NAME` from `.env`.
 
 ## Installation
 
