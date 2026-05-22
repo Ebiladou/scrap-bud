@@ -28,7 +28,6 @@ def extract_president(soup):
                     return name
     return "Not found"
 
-
 def get_soup(url):
     try:
         resp = requests.get(url, headers=HEADERS, timeout=15)
@@ -89,7 +88,6 @@ def scrape_society_detail(stub):
         "url": society_url,
     }
 
-
 def main():
     stubs = get_all_society_stubs()
 
@@ -106,7 +104,5 @@ def main():
 
     save_to_excel(results, OUTPUT_FILE)
 
-
 if __name__ == "__main__":
     main()
-_required_env
