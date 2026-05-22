@@ -11,9 +11,6 @@ load_dotenv()
 URL = os.getenv("TEST_LIST_URL")
 School_name = os.getenv("TEST_SCHOOL_NAME")
 
-if not URL or not School_name:
-    raise RuntimeError("Missing TEST_LIST_URL or TEST_SCHOOL_NAME in .env")
-
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, "html.parser")
 

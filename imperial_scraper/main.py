@@ -15,8 +15,6 @@ def get_soup(url):
         return None
 
 def get_all_society_stubs():
-    print(f"Collecting society list from {LIST_URL}...")
-
     soup = get_soup(LIST_URL)
     if not soup:
         return []

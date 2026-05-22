@@ -12,7 +12,6 @@ PRESIDENT_PATTERNS = [
     r"presidents?\s*[:-]\s*(.*?)(?=\b(?:vice|treasurer|secretary|social|welfare|outreach|publicity)\b|$)",
 ]
 
-
 def extract_president(soup):
     for elem in soup.find_all(["p", "li", "dt", "dd"]):
         text = elem.get_text(" ", strip=True)
@@ -37,7 +36,6 @@ def get_soup(url):
         print(f"[ERROR] {url}: {e}")
         return None
 
-
 def get_all_society_stubs():
     print(f"Loading {LIST_URL} ...")
     soup = get_soup(LIST_URL)
@@ -61,7 +59,6 @@ def get_all_society_stubs():
 
     print(f"Found {len(stubs)} societies.\n")
     return stubs
-
 
 def scrape_society_detail(stub):
     society_url = urljoin(LIST_URL, stub["href"])
